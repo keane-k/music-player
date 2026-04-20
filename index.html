@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Reference stylesheet to style.css -->
+        <link rel="stylesheet" href="style.css">
+        <title>Destiny Music Player</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Include icons from Font Awesome using this script -->
+        <script src="https://kit.fontawesome.com/36c943f9da.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Music Player -->
+            <div class="music-player">
+                <!-- Add icons for Back and Menu -->
+                <nav>
+                    <div class="circle">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    
+                    <!-- Add icon for Volume Control -->
+                    <div class="volume-container">
+                        <i class="fa-solid fa-volume-high" id="volume-icon"></i>
+
+                        <!-- Volume Slider  -->
+                        <div class="volume-slider">
+                            <input type="range" min="0" max="1" step="0.01" value="0.5" id="volume-control">
+                        </div>
+                    </div>
+
+                    
+                    <div class="circle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </nav>
+
+                <!-- Thumbnail for Song -->
+                <img src="images/thumbnail1.jpg" class="song-img">
+
+                <!-- Add text for Song Name and Artist Name -->
+                <h1>Journey</h1> 
+                <p>Destiny 2</p>
+
+                <!-- Audio Source -->
+                <audio loop id="song">
+                    <source src="songs/Destiny 2 - Journey (Vocal Variant 2).mp3" type="audio/mpeg">
+                </audio>
+
+                <!-- Create our own audio progress bar instead of the default one provided by <audio> -->
+                <input type="range" value="0" id="music-progress">
+
+                <!-- Add control icons, for controlling of music-progress bar -->
+                <div class="controls">
+                    <div>
+                        <i class="fa-solid fa-backward"></i>    <!-- Add Backward icon -->
+                    </div>
+
+                    <div onclick="playPause()">    
+                        <i class="fa-solid fa-play" id="control-icon"></i>        <!-- Add Play icon -->
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-forward"></i>     <!-- Add Foward icon -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reference javascript to script.js -->
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

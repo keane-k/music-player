@@ -1,0 +1,210 @@
+/* For all HTML elements */
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Neue Haas Grotesk', 'Helvetica Neue', Helvetica, 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* body {
+    margin:0;
+    padding: 0;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/Homestead.png');
+    background-size: cover;
+    font-family: 'Neue Haas Grotesk', 'Helvetica Neue', Helvetica, sans-serif;
+    box-sizing: border-box;
+} */
+
+.container{
+    width:100%;
+    height:100vh;
+    background-image: url('images/Homestead.png');
+    background-size: cover;
+    /* To align music-player to the center, as well as all other future texts */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Create the borders for Music Player */
+.music-player{
+    width: 400px;
+    padding: 25px 35px;
+    background: #f5c9a7;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    /* Align both arrow icon and bar icon horizontally, with even space in-between them */
+    justify-content: space-between;
+    /* Create some space at the bottom of these icons */
+    margin-bottom: 30px;
+}
+
+/* Create a circle on each of the two icons */
+nav .circle{
+    /* To create circle, have both width and height to be the same pixels */
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    /* Center icons in the circle, adjust height */
+    line-height: 40px;
+    /* Set Background color for circle to be White */
+    background: #fff;
+    /* Set icon (or text) color */
+    /* color: #f53192; */
+    color:#546170;
+    /* Create shadows underneath the circles to create a 3D hovering effect */
+    box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+}
+
+/* Create a circle on Volume icon */
+nav .volume-container{
+    /* To create circle, have both width and height to be the same pixels */
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    /* Center icons in the circle, adjust height */
+    line-height: 40px;
+    /* Set Background color for circle to be White */
+    background: #fff;
+    /* Set icon (or text) color */
+    /* color: #f53192; */
+    color:#546170;
+    /* Create shadows underneath the circles to create a 3D hovering effect */
+    box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+    margin-left: 180px;
+}
+
+nav .volume-container .volume-slider{
+    position:absolute;
+    bottom: 70px;
+    left:50%;
+    transform: translateX(-50%);
+                   /* hides default slider */
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.volume-container.active .volume-slider{
+    opacity:1;
+    pointer-events: auto;
+}
+
+
+/* Show Volume Slider when Volume Icon is clicked on */
+.volume-container.active .volume-slider{
+    display:block;
+}
+
+
+/* Create a circle border around the thumbnail */
+.song-img{
+    /* Thumbnail img is too big, crop/force it into a square */
+    width: 220px;
+    height:220px;
+    border: 8px solid #fff;     /* Create a border around thumbnail with white background */
+    border-radius: 50%;
+    object-fit: cover;            /* Crop image nicely */
+    box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
+
+}
+
+/* Decorate .music-player h1 */
+.music-player h1{
+    font-size: 30px;
+    font-weight: 400;
+    color:#333;
+    margin-top:20px;
+}
+
+/* Decorate .music-player p */
+.music-player p{
+    font-size: 16px;
+    color:#333;
+    margin-top: 4px;
+}
+
+/* Decorate music-progress bar */
+#music-progress{
+    -webkit-appearance: none;   /* hides default <range> slider, we want to decorate the progress bar ourselves */
+    width: 100%;
+    height:6px;
+    background: #546170;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 40px 0;
+}
+
+/* Decorate music-progress bar thumb */
+/* for Chrome, Safari */
+#music-progress::-webkit-slider-thumb{
+    -webkit-appearance: none;   /* hides default <range> slider thumb, we want to decorate the progress bar ourselves */
+    width: 40px;
+    height: 40px;
+    /* background: #899eb9; */
+    background-image: url('images/traveler-icon.png');      /* have the Traveller be the thumb */
+    background-size: 700%;                                  /* Zoom in on the Traveler */ 
+    background-position: center;                            /* Position the Traveler to be in the center */ 
+    background-position-y: 25%;                             /* Position the Traveler to be in the center */ 
+    background-repeat: no-repeat;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+}
+
+/* Decorate music-progress bar thumb */
+/* for Firefox */
+#music-progress::-moz-range-thumb{
+    -webkit-appearance: none;   /* hides default <range> slider thumb, we want to decorate the progress bar ourselves */
+    width: 40px;
+    height: 40px;
+    /* background: #899eb9; */
+    background-image: url('images/traveler-icon.png');      /* have the Traveller be the thumb */
+    background-size: 700%;                                  /* Zoom in on the Traveler */ 
+    background-position: center;                            /* Position the Traveler to be in the center */ 
+    background-position-y: 25%;                             /* Position the Traveler to be in the center */ 
+    background-repeat: no-repeat;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+}
+
+/* Position the 3 icons correctly */
+.controls{
+    display:flex;                           /* Align the 3 icons horizontally */
+    justify-content: center;                /* Horizontally position the 3 icons in the center */
+    align-items: center;                    /* Vertically position the 3 icons in the center */
+}
+
+/* Create a circle border around the 3 icons */
+.controls div{
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    background: #fff;
+    display:inline-flex;                   /* Align the 3 icons horizontally */
+    justify-content: center;               /* Horizontally position the 3 icons in the center of their new border */
+    align-items: center;                   /* Vertically position the 3 icons in the center of their new border */
+    border-radius:50%;
+    color:#546170;
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+}
+
+/* (Play, 2nd) icon, increase size, change bg color and icon color */
+.controls div:nth-child(2){
+    transform: scale(1.5);
+    background: #546170;
+    color:#fff;
+}
