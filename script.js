@@ -1,6 +1,8 @@
 const music_progress = document.getElementById("music-progress");
 const song = document.getElementById("song");
 const control_icon = document.getElementById("control-icon");
+const volume_icon = document.getElementById("volume-icon");
+
 
 // Music Progress bar to do the following things:
 // 1. Sync to the music and track along with it
@@ -46,3 +48,17 @@ music_progress.onchange = function(){
     control_icon.classList.remove("fa-play");
     control_icon.classList.add("fa-pause");
 }
+
+
+// Mute and Unmute function
+volume_icon.addEventListener("click",()=>{
+    song.muted = !song.muted;                      // flip the value with every click, between True (no sound) and False (have sound)
+
+    // Update the icons
+    if (song.muted) {
+        volume_icon.className = "fa-solid fa-volume-xmark";
+    }
+    else{
+        volume_icon.className = "fa-solid fa-volume-high";
+    }
+});

@@ -84,22 +84,21 @@ nav .volume-container{
     margin-left: 180px;
 }
 
-nav .volume-container .volume-slider{
+/* nav .volume-container .volume-slider{
     position:absolute;
     bottom: 70px;
     left:50%;
     transform: translateX(-50%);
-                   /* hides default slider */
 
     opacity: 0;
     pointer-events: none;
     transition: 0.3s ease;
-}
+} */
 
-.volume-container.active .volume-slider{
+/* .volume-container.active .volume-slider{
     opacity:1;
     pointer-events: auto;
-}
+} */
 
 
 /* Show Volume Slider when Volume Icon is clicked on */
