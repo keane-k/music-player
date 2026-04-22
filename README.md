@@ -11,12 +11,4 @@ A little fun project building a Destiny 2-themed music player using HTML, CSS an
 2. Open `index.html` in any modern web browser
 3. Use the Play/Pause buttons to interact with the audio player
 4. The Traveler (iykyk D2-lore) is your music thumb where you can slide around to change the current music runtime
-
-## Future Works
-- Add mute function
-- Add volume slider
-- Add loop button
-- House a library of songs
--------------------------
-
-## More details to come !
+5. Clicking on Audio icon 🔊 will mute audio, click it again to unmute audio
