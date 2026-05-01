@@ -119,16 +119,16 @@ nav .volume-container{
 
 }
 
-/* Decorate .music-player h1 */
-.music-player h1{
+/* Decorate .music-player h1 (replaced with #song-name) */
+.music-player #song-name{
     font-size: 30px;
     font-weight: 400;
     color:#333;
     margin-top:20px;
 }
 
-/* Decorate .music-player p */
-.music-player p{
+/* Decorate .music-player p (replaced with #song-artist) */
+.music-player #song-artist{
     font-size: 16px;
     color:#333;
     margin-top: 4px;
@@ -144,6 +144,7 @@ nav .volume-container{
     cursor: pointer;
     margin: 40px 0;
 }
+
 
 /* Decorate music-progress bar thumb */
 /* for Chrome, Safari */
@@ -179,31 +180,43 @@ nav .volume-container{
     box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
 }
 
-/* Position the 3 icons correctly */
+
+/* Position the 5 icons correctly */
 .controls{
-    display:flex;                           /* Align the 3 icons horizontally */
-    justify-content: center;                /* Horizontally position the 3 icons in the center */
-    align-items: center;                    /* Vertically position the 3 icons in the center */
+    display:flex;                           /* Align the 5 icons horizontally */
+    justify-content: center;                /* Horizontally position the 5 icons in the center */
+    align-items: center;                    /* Vertically position the 5 icons in the center */
+    gap: 10px;
 }
 
-/* Create a circle border around the 3 icons */
+/* Create a circle border around the 5 icons */
 .controls div{
-    width: 60px;
-    height: 60px;
-    margin: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
     background: #fff;
-    display:inline-flex;                   /* Align the 3 icons horizontally */
-    justify-content: center;               /* Horizontally position the 3 icons in the center of their new border */
-    align-items: center;                   /* Vertically position the 3 icons in the center of their new border */
+    display:inline-flex;                   /* Align the 5 icons horizontally */
+    justify-content: center;               /* Horizontally position the 5 icons in the center of their new border */
+    align-items: center;                   /* Vertically position the 5 icons in the center of their new border */
     border-radius:50%;
     color:#546170;
     box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
     cursor: pointer;
 }
 
-/* (Play, 2nd) icon, increase size, change bg color and icon color */
+
 .controls div:nth-child(2){
     transform: scale(1.5);
+}
+
+/* (Play, 3nd) icon, increase size, change bg color and icon color */
+.controls div:nth-child(3){
+    transform: scale(2);
     background: #546170;
     color:#fff;
 }
+
+.controls div:nth-child(4){
+    transform: scale(1.5);
+}
+

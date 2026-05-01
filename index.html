@@ -37,17 +37,19 @@
                     </div>
                 </nav>
 
-                <!-- Thumbnail for Song -->
-                <img src="images/thumbnail1.jpg" class="song-img">
+                <!-- Thumbnail(Image) for Song -->
+                <img src="images/thumbnail1.jpg" class="song-img" id="song-image">
 
                 <!-- Add text for Song Name and Artist Name -->
-                <h1>Journey</h1> 
-                <p>Destiny 2</p>
+                <div id="song-name">Song</div>
+                <div id="song-artist">Artist</div>
+                <!-- <h1>Journey</h1>  -->
+                <!-- <p>Destiny 2</p> -->
 
                 <!-- Audio Source -->
-                <audio loop id="song">
+                <!-- <audio loop id="song">
                     <source src="songs/Destiny 2 - Journey (Vocal Variant 2).mp3" type="audio/mpeg">
-                </audio>
+                </audio> -->
 
                 <!-- Create our own audio progress bar instead of the default one provided by <audio> -->
                 <input type="range" value="0" id="music-progress">
@@ -55,15 +57,23 @@
                 <!-- Add control icons, for controlling of music-progress bar -->
                 <div class="controls">
                     <div>
-                        <i class="fa-solid fa-backward"></i>    <!-- Add Backward icon -->
+                        <i class="fa-solid fa-shuffle" id="shuffle-song"></i>    <!-- Add Shuffle icon -->
+                    </div>
+                    
+                    <div>
+                        <i class="fa-solid fa-backward-step" id="previous-song"></i>    <!-- Add Backward icon -->
                     </div>
 
                     <div onclick="playPause()">    
-                        <i class="fa-solid fa-play" id="control-icon"></i>        <!-- Add Play icon -->
+                        <i class="fa-solid fa-play fa" id="control-icon"></i>        <!-- Add Play icon -->
                     </div>
 
                     <div>
-                        <i class="fa-solid fa-forward"></i>     <!-- Add Foward icon -->
+                        <i class="fa-solid fa-forward-step" id="next-song"></i>     <!-- Add Foward icon -->
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-repeat" id="repeat-song"></i>     <!-- Add Foward icon -->
                     </div>
                 </div>
             </div>
