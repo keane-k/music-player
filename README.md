@@ -4,7 +4,8 @@ A little fun project building a Destiny 2-themed music player using HTML, CSS an
 - It features a slider with The Traveler as its music thumb that moves with the song, moving the Traveler along the slider changes the current music runtime. 
 - Integrated Play/Pause button feature that changes icon as user decides when to play or pause the song.
 - Previous/Next song buttons to skip tracks (changes song, displays new song name, artist name and thumbnail image)
-- Mute/Unmute button 
+- Working Mute/Unmute button
+- Working Music Loop/Repeat button
 
 The music player also supports a music playlist, users may add their preferred songs (along with Song Name, Artist Name and Thumbnail Image) in `script.js`.
 <p align='center'>
