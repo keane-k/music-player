@@ -10,7 +10,7 @@ const song_artist = document.getElementById("song-artist");
 const shuffle_song = document.getElementById("shuffle-song");
 const previous_song = document.getElementById("previous-song");
 const next_song = document.getElementById("next-song");
-const repeat_song = document.getElementById("repeat-song");
+const loop_song = document.getElementById("loop-song");
 
 const songs = [
     {
@@ -91,6 +91,24 @@ volume_icon.addEventListener("click",()=>{
         volume_icon.className = "fa-solid fa-volume-high";
     }
 });
+
+
+// Loop function
+// First induce the default state of Loop btn to be false
+let isLooping = false;
+// Then we work on toggleLoop()
+function toggleLoop(){
+    isLooping = !isLooping;                         // flip value with every click, allowing user to toggle loop state (True or False)
+
+    if (isLooping){
+        audio.loop=true;
+        loop_song.classList.add("active");          // allow us to toggle on/off background color of btn for visual confirmation
+    }
+    else{
+        audio.loop=false;
+        loop_song.classList.remove("active");       // allow us to toggle on/off background color of btn for visual confirmation
+    }
+}
 
 
 // Previous Song button

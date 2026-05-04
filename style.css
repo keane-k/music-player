@@ -204,7 +204,6 @@ nav .volume-container{
     cursor: pointer;
 }
 
-
 .controls div:nth-child(2){
     transform: scale(1.5);
 }
@@ -220,3 +219,7 @@ nav .volume-container{
     transform: scale(1.5);
 }
 
+.controls div.active{
+    background:#546170;
+    color:#fff;
+}
